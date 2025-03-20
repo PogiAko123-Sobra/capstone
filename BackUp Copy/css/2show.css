@@ -1,0 +1,385 @@
+:root {
+    --primary: #4361ee;
+    --secondary: #3a0ca3;
+    --accent: #7209b7;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --success: #4cc9f0;
+    --danger: #f72585;
+    --warning: #ffca3a;
+    --card-radius: 16px;
+}
+
+body {
+    background: linear-gradient(135deg, #e9ecef, #f8f9fa);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-header {
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    color: white;
+    border-radius: 0 0 var(--card-radius) var(--card-radius);
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-header:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 70%);
+    transform: rotate(30deg);
+}
+
+.dashboard-header h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.dashboard-header .subtitle {
+    opacity: 0.9;
+    font-weight: 300;
+    position: relative;
+}
+
+.stat-card {
+    background: white;
+    border-radius: var(--card-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card .card-pattern {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    opacity: 0.1;
+    border-radius: 0 0 0 100%;
+}
+
+.stat-card h5 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    position: relative;
+}
+
+.stat-card h5:after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 3px;
+}
+
+.stat-card .stat-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--accent), var(--primary));
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 1.2rem;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.7rem;
+}
+
+.stat-row .label {
+    color: #6c757d;
+}
+
+.stat-row .value {
+    font-weight: 600;
+}
+
+.chart-section {
+    background: white;
+    border-radius: var(--card-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    position: relative;
+    color: var(--dark);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.section-title:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, var(--primary), transparent);
+}
+
+.section-title i {
+    margin-right: 0.5rem;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+}
+
+.table-container {
+    background: white;
+    border-radius: var(--card-radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.custom-table {
+    min-width: 700px;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+.custom-table thead th {
+    border: none;
+    background: rgba(67, 97, 238, 0.05);
+    color: var(--dark);
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.custom-table thead th:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.custom-table thead th:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+.custom-table tbody tr {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    transition: all 0.2s;
+}
+
+.custom-table tbody tr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.custom-table tbody td {
+    border: none;
+    padding: 1rem;
+    vertical-align: middle;
+    background: white;
+}
+
+.custom-table tbody td:first-child {
+    border-radius: 10px 0 0 10px;
+    font-weight: 600;
+}
+
+.custom-table tbody td:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+.badge-stress {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.75em;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 50rem;
+}
+
+.btn-action {
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-action.btn-danger {
+    background: var(--danger);
+    border: none;
+}
+
+.btn-action.btn-danger:hover {
+    background: #d90166;
+    transform: translateY(-2px);
+}
+
+.btn-action.btn-primary {
+    background: var(--primary);
+    border: none;
+}
+
+.btn-action.btn-primary:hover {
+    background: #2d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn-toggle {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+    transition: all 0.3s;
+}
+
+.btn-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
+}
+
+.toggle-stats-container {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 1.5rem;
+}
+
+.toggle-stats-container:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), transparent);
+    z-index: -1;
+}
+
+.footer {
+    background: white;
+    border-radius: var(--card-radius) var(--card-radius) 0 0;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media (max-width: 767.98px) {
+    .dashboard-header {
+        padding: 1.5rem 1rem;
+    }
+    
+    .dashboard-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .stat-card {
+        margin-bottom: 1rem;
+    }
+    
+    .custom-table {
+        min-width: auto;
+    }
+}
+
+.date-badge {
+    background: rgba(67, 97, 238, 0.1);
+    color: var(--primary);
+    border-radius: 50px;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.stress-change {
+    display: flex;
+    align-items: center;
+}
+
+.stress-change .icon {
+    margin-right: 0.5rem;
+}
+
+.stress-change.positive {
+    color: #4cc9f0;
+}
+
+.stress-change.negative {
+    color: #f72585;
+}
+
+.chart-tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.chart-tab {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+    color: #6c757d;
+}
+
+.chart-tab.active {
+    background: rgba(67, 97, 238, 0.1);
+    color: var(--primary);
+}
+
+.chart-tab:hover:not(.active) {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+}

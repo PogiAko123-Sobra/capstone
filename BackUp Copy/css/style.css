@@ -1,0 +1,149 @@
+/* --For Index Styling-- */
+.sidebar {
+    width: 250px;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        z-index: 1000;
+    }
+    .content {
+        margin-top: 80px;
+    }
+}
+/* Ensure images and text scale properly */
+img {
+    max-width: 100%;
+    height: auto;
+}
+.hero h1 {
+    font-size: 2rem;
+}
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+}
+/* --End For Index Styling--*/
+
+
+
+/* --For feedback Styling-- */
+.btn-submit {
+    padding: 5px 10px;
+    font-size: 20px;
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #2575fc;
+}
+.navbar {
+    backdrop-filter: blur(10px);
+}
+.card-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 768px) {
+    .card-container {
+        padding: 15px;
+    }
+}
+/* --End For feedback Styling-- */
+
+
+
+/* --For feedback_result Styling-- */
+           /* Table Styling */
+           .progress-table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+        }
+        .progress-table th, .progress-table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+        .progress-table th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .progress-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .progress-table tr:hover {
+            background-color: #f1f1f1;
+        }
+        .btn-submit {
+            padding: 5px 10px;
+            font-size: 20px;
+            background-color: #6a11cb;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn-submit:hover {
+            background-color: #2575fc;
+        }
+        .navbar {
+            backdrop-filter: blur(10px);
+        }
+        .table-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        @media (max-width: 768px) {
+            .table-container {
+                padding: 10px;
+            }
+            .progress-table th, .progress-table td {
+                font-size: 14px;
+                padding: 8px;
+            }
+            .btn-submit {
+                font-size: 16px;
+                padding: 8px;
+            }
+        }
+/* --End For feedback_result Styling-- */
+
+
+/* -- For admin/index Styling-- */
+.table-container { 
+    background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(21, 212, 37, 0.1); overflow-x: auto; 
+}
+.table { 
+    white-space: nowrap; 
+}
+@media (max-width: 768px) {
+    .table-container { padding: 10px; }
+    .navbar-nav { 
+        flex-direction: column;
+        text-align: center; 
+    }
+    .chart-container { 
+        height: 40vh !important; 
+    }
+}
+/* -- End For admin/index Styling-- */
+
+
+

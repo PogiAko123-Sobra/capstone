@@ -1,0 +1,191 @@
+
+/* Fonts */
+:root {
+  --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Jost",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #37517e; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #47b2e4; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
+.light-background {
+  --background-color: #f5f6f8;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #37517e;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
+  --surface-color: #4668a2;
+  --contrast-color: #ffffff;
+}
+
+/* Smooth scroll */
+:root {
+  scroll-behavior: smooth;
+}
+
+/*--------------------------------------------------------------
+# General Styling & Shared Classes
+--------------------------------------------------------------*/
+body {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+.btn-primary {
+  background: #c218a5;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #ff4757;
+}
+
+.btn-outline-light {
+  padding: 12px 24px;
+  font-size: 18px;
+}
+
+.text-highlight {
+  color: #5df058 !important;
+}
+
+
+.hero {
+  width: 100%;
+  min-height: 80vh;
+  position: relative;
+  padding: 120px 0 60px 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+.hero p {
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin: 5px 0 30px 0;
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.hero .btn-get-started {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px 12px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+
+.hero .btn-get-started:hover {
+  color: var(--contrast-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+.hero .btn-watch-video {
+  font-size: 16px;
+  transition: 0.5s;
+  margin-left: 25px;
+  color: var(--default-color);
+  font-weight: 600;
+}
+
+.hero .btn-watch-video i {
+  color: var(--contrast-color);
+  font-size: 32px;
+  transition: 0.3s;
+  line-height: 0;
+  margin-right: 8px;
+}
+
+.hero .btn-watch-video:hover {
+  color: var(--accent-color);
+}
+
+.hero .btn-watch-video:hover i {
+  color: color-mix(in srgb, var(--accent-color), transparent 15%);
+}
+
+.hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@media (max-width: 640px) {
+  .hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  .hero .btn-get-started,
+  .hero .btn-watch-video {
+    font-size: 13px;
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
